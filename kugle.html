@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Geometriberegner</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+		<meta name="decription" content="Informationsteknologi" >
+		<meta name="keywords" content="kugle, cylinder, kasse, kegle, keglestub, pyramide, fysik" >
+		<meta name="author" content="Anders Raagaard, Emil Trangeled" >
+			<link rel="stylesheet" href="style.css" type="text/css" >
+			<link rel="shortcut icon" href="images/icon.png" >
+</head>
+<body>
+<div id="header"> <!-- vi lavede en div istedet for HTML5's header tag, det er nemmere at se syntes vi !-->
+		<div id="logo"><a style="text-decoration:none" href="index.html"><h2>Geometriberegneren<h2></a></div>
+</div>
+<div class="menu5">
+    <a href="kugle.html" class="current">Kugle</a>
+    <a href="cylinder.html">Cylinder</a>
+    <a href="kasse.html">Kasse</a>
+    <a href="kegle.html">Kegle</a>
+    <a href="keglestub.html">Keglestub</a>
+	<a href="pyramide.html">Pyramide</a>
+	<a href="Epot.html">Ekstra fysik</a>	
+</div>
+<div id="wrapper">
+<script> /* ******************************Jonathan hjalp med syntaks i JS her************************************************************************** */
+        /* Rumfang */
+        function kugle() {
+
+            // Get the value of the input field with id="radius"
+            var r = document.getElementById("Kradius").value;
+            var pi = Math.PI;
+
+            document.getElementById("radiuskugle").innerHTML = "r = " + r
+            
+            textVR = pi*r*r*r*4/3;
+            document.getElementById("kugleVR").innerHTML = "Rumfang: " + textVR + " cm" + "3".sup();
+            
+            textOA = 4*pi*r*r;
+            document.getElementById("kugleOA").innerHTML = "Overfladeareal: " + textOA + " cm" + "2".sup();
+        }
+    
+        </script>
+
+        <h1>Kugle - Rumfang og overflade</h1>
+
+        <p>
+         Kuglens rumfang: <a href="https://www.codecogs.com/eqnedit.php?   latex=\inline&space;V=&space;\frac{4}{3}&space;\cdot&space;\pi&space;\cdot&space;r^{3}" target="_blank"><img                src="https://latex.codecogs.com/gif.latex?\inline&space;V=&space;\frac{4}{3}&space;\cdot&space;\pi&space;\cdot&space;r^{3}" title="V= \frac{4}{3} \cdot \pi \cdot r^{3}" /></a>
+        </p>
+        
+        <p>
+            Kuglens overfladeareal: <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;A&space;=&space;4&space;\cdot&space;\pi&space;\cdot&space;r^{2}" target="_blank"><img               src="https://latex.codecogs.com/gif.latex?\inline&space;A&space;=&space;4&space;\cdot&space;\pi&space;\cdot&space;r^{2}" title="A = 4 \cdot \pi \cdot r^{2}" /></a>
+        </p></br>
+        
+        <div id="svgcontainer">
+        <svg viewBox="0 0 250 250"><!--******************Maria hjalp her ********************!-->
+            KUGLE:
+            <ellipse cx="125" cy="125" rx="100" ry="100" style="fill:none;stroke:black;stroke-width:2" />
+            <ellipse cx="125" cy="125" rx="100" ry="40" style="fill:#dbd3bd;stroke:black;stroke-width:2"/>
+            <line x1="125" y1="125" x2="225" y2="125" style="stroke:red;stroke-width:2;"/>
+            <text x="150" y="145" fill="red" id="radiuskugle">r = </text>
+        </svg>
+        </div>
+            
+        <!-- Beregning -->
+    
+        <p>
+            <b>Beregning af kuglen:</b>
+        </p>
+    
+        <p>
+            Indtast radius på kuglen i cm
+        </p>
+    
+    
+        Radius: <input id="Kradius">
+
+    <button type="button" onclick="kugle()">Beregn</button>
+    
+
+        <p id="kugleVR"> </p>
+
+        <p id="kugleOA"> </p>
+<div id="footer"><br />&copy; 2016 Anders Raagaard og Emil Trangeled. All rights reserved.</div>
+</body>
+</html>
