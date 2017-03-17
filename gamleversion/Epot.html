@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Geometriberegner</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+		<meta name="decription" content="Informationsteknologi" >
+		<meta name="keywords" content="kugle, cylinder, kasse, kegle, keglestub, pyramide, fysik" >
+		<meta name="author" content="Anders Raagaard, Emil Trangeled" >
+			<link rel="stylesheet" href="style.css" type="text/css" >
+			<link rel="shortcut icon" href="images/icon.png" >
+</head>
+<body>
+<div id="header"> <!-- vi lavede en div istedet for HTML5's header tag, det er nemmere at se syntes vi !-->
+		<div id="logo"><a style="text-decoration:none" href="index.html"><h2>Geometriberegneren<h2></a></div>
+</div>
+<div class="menu5">
+    <a href="kugle.html">Kugle</a>
+    <a href="cylinder.html">Cylinder</a>
+    <a href="kasse.html">Kasse</a>
+    <a href="kegle.html">Kegle</a>
+    <a href="keglestub.html">Keglestub</a>
+	<a href="pyramide.html">Pyramide</a>
+	<a href="Epot.html" class="current">Ekstra fysik</a>	
+</div>
+<div id="wrapper">
+<script>
+        /* Rumfang */
+        function epot() {
+
+            // Get the value of the input field with id="radius"
+            var m = document.getElementById("masse").value;
+            var h = document.getElementById("hojde").value;
+
+            text = m*9.82*h;
+            document.getElementById("epot").innerHTML = "Potentiel energi: " + text + " kJ";
+            
+        }
+    
+        </script>
+
+        <h1>Fysik - Potentiel energi</h1>
+
+        <p>
+            Potentiel energi: <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;Epot&space;=&space;m&space;\cdot&space;g&space;\cdot&space;h" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;Epot&space;=&space;m&space;\cdot&space;g&space;\cdot&space;h" title="Epot = m \cdot g \cdot h" /></a>
+        </p>Værdien "g" er en fysisk konstant på 9,82 m/s<sup>2</sup></br>
+    
+        
+    
+        <!-- Beregning -->
+    
+        <p>
+            <b>Beregning af potentiel energi:</b>
+        </p>
+    
+        <p>
+            Indtast massen og højden for objektet.
+        </p>
+    
+    
+        Massen: <input id="masse"><br><br>
+    
+        Højden: <input id="hojde"><br><br>
+
+    <button type="button" onclick="epot()">Beregn</button>
+    
+
+        <p id="epot"> </p>
+<div id="footer"><br />&copy; 2016 Anders Raagaard og Emil Trangeled. All rights reserved.</div>
+</body>
+</html>

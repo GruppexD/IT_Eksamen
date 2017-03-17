@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Geometriberegner</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+		<meta name="decription" content="Informationsteknologi" >
+		<meta name="keywords" content="kugle, cylinder, kasse, kegle, keglestub, pyramide, fysik" >
+		<meta name="author" content="Anders Raagaard, Emil Trangeled" >
+			<link rel="stylesheet" href="style.css" type="text/css" >
+			<link rel="shortcut icon" href="images/icon.png" >
+</head>
+<body>
+<div id="header"> <!-- vi lavede en div istedet for HTML5's header tag, det er nemmere at se syntes vi !-->
+		<div id="logo"><a style="text-decoration:none" href="index.html"><h2>Geometriberegneren<h2></a></div>
+</div>
+<div class="menu5">
+    <a href="kugle.html">Kugle</a>
+    <a href="cylinder.html">Cylinder</a>
+    <a href="kasse.html">Kasse</a>
+    <a href="kegle.html">Kegle</a>
+    <a href="keglestub.html">Keglestub</a>
+	<a href="pyramide.html" class="current">Pyramide</a>
+	<a href="Epot.html">Ekstra fysik</a>	
+</div>
+<div id="wrapper">
+<script>
+        /* Rumfang */
+        function pyramide() {
+            
+            // Get the value of the input field with id="radius"
+            var h = document.getElementById("Phojde").value;
+            var G = document.getElementById("Pgrundf").value;
+            var g = document.getElementById("Plsider").value;
+
+            document.getElementById("Phojdesvg").innerHTML = "h = " + h;
+            document.getElementById("Pgrundlsvg").innerHTML = "g = " + g;
+            document.getElementById("Pgrundfsvg").innerHTML = "G = " + G;
+            
+            var textVR = 1/3*h*G;
+            document.getElementById("pyramideVR").innerHTML = "Rumfang: " + textVR + " cm" + "3".sup();
+            
+        
+            var textOA = 4*1/2*h*g+G;
+            document.getElementById("pyramideOA").innerHTML = "Overfladeareal: " + textOA + " cm" + "2".sup();
+        }
+    
+        </script>
+
+        <h1>Pyramide med regulær grundflade - Rumfang og overflade</h1>
+
+        <p>
+            Pyramidens rumfang: <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;V&space;=&space;\frac{1}{3}&space;\cdot&space;h&space;\cdot&space;G" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;V&space;=&space;\frac{1}{3}&space;\cdot&space;h&space;\cdot&space;G" title="V = \frac{1}{3} \cdot h \cdot G" /></a>
+        </p>
+        
+        <p>
+            Pyramidens overflade: <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;4\cdot&space;\frac{1}{2}\cdot&space;h\cdot&space;g&space;&plus;&space;G" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;4\cdot&space;\frac{1}{2}\cdot&space;h\cdot&space;g&space;&plus;&space;G" title="4\cdot \frac{1}{2}\cdot h\cdot g + G" /></a>
+        </p>
+        <p>"G" er grundfladearealet</p>
+        <p>"g" er sidernes lænde på grundfladen</p><br>
+        
+        <div id="svgcontainer">
+            <svg viewBox="0 0 330 300">
+
+                <polygon points="75,200 200,130 325,200 200,270" style="fill:#dbd3bd;stroke-width:1"></polygon>
+
+                <line x1="200" y1="270" x2="75" y2="200" style="stroke:red;stroke-width:2"></line>
+
+                <line x1="200" y1="270" x2="325" y2="200" style="stroke:black;stroke-width:2"></line>
+
+                <line x1="200" y1="270" x2="200" y2="0" style="stroke:black;stroke-width:2"></line>
+
+                <line x1="75" y1="200" x2="200" y2="0" style="stroke:black;stroke-width:2"></line>
+
+                <line x1="325" y1="200" x2="200" y2="0" style="stroke:black;stroke-width:2"></line>
+            
+                <line x1="200" y1="0" x2="75" y2="0" style="stroke:black;stroke-width:2"></line>
+            
+                <line x1="75" y1="0" x2="75" y2="200" style="stroke:red;stroke-width:2"></line>
+            
+                <line x1="325" y1="200" x2="200" y2="130" style="stroke:black;stroke-width:2; troke-linecap:round; stroke-dasharray:10, 10"></line>
+
+                <line x1="200" y1="130" x2="75" y2="200" style="stroke:black;stroke-width:2; troke-linecap:round; stroke-dasharray:10, 10"></line>
+
+                <text x="80" y="250" fill="red" id="Pgrundlsvg">g = </text>
+                <text x="80" y="100" fill="red" id="Phojdesvg">h = </text>
+                <text x="210" y="200" fill="red" id="Pgrundfsvg">G = </text>
+            </svg>
+        </div>
+        <!-- Beregning -->
+    
+        <p>
+            <b>Bergening af pyramiden:</b>
+        </p>
+    
+        <p>
+            Indtast højde, grundfladeareal, sider på grundfladen og sidernes længder på pyramiden i cm
+        </p>
+    
+    
+        Højde: <input id="Phojde"></br></br>
+
+        Grundfladeareal: <input id="Pgrundf"></br></br>
+
+        Grundlinje: <input id="Plsider"></br></br>
+
+    <button type="button" onclick="pyramide()">Beregn</button>
+    
+
+        <p id="pyramideVR"> </p>
+
+        <p id="pyramideOA"> </p>
+<div id="footer"><br />&copy; 2016 Anders Raagaard og Emil Trangeled. All rights reserved.</div>
+</body>
+</html>
