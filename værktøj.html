@@ -2,102 +2,36 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-	<title>Geometriberegner</title>
+    
+	<title>Værktøjskassen</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-		<meta name="decription" content="Informationsteknologi" >
-		<meta name="keywords" content="kugle, cylinder, kasse, kegle, keglestub, pyramide, fysik" >
-		<meta name="author" content="Anders Raagaard, Emil Trangeled" >
+		<meta name="decription" content="Eksamensprojekt" >
+		<meta name="keywords" content="Database, Værktøjskassen, Værktøj, Eksamensprojek, Bibliotek, Tools, Træ, Træværksted, Bordgrupper, Registrering" >
+		<meta name="author" content="Emil Trangeled, Joachim Bunger, Rune Christensen" >
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 			<link rel="stylesheet" href="style.css" type="text/css" >
-			<link rel="shortcut icon" href="images/icon.png" >
+			<link rel="shortcut icon" href="images/tool.icon.png" >
 </head>
 <body>
-<div id="header"> <!-- vi lavede en div istedet for HTML5's header tag, det er nemmere at se syntes vi !-->
-		<div id="logo"><a style="text-decoration:none" href="index.html"><h2>Geometriberegneren<h2></a></div>
+<div id="header"> 
+		<div id="logo"><a style="text-decoration:none" href="index.html"><h2>VÆRKTØJSKASSEN<h2></a></div>
 </div>
-<div class="menu5">
-    <a href="kugle.html">Kugle</a>
-    <a href="cylinder.html" class="current">Cylinder</a>
-    <a href="kasse.html">Kasse</a>
-    <a href="kegle.html">Kegle</a>
-    <a href="keglestub.html">Keglestub</a>
-	<a href="pyramide.html">Pyramide</a>
-	<a href="Epot.html">Ekstra fysik</a>	
-</div>
+
 <div id="wrapper">
 <script>
-        /* Rumfang */
-        function cylinder() {
-
-            // Get the value of the input field with id="radius"
-            var r = document.getElementById("Cradius").value;
-            var h = document.getElementById("Chojde").value;
-            var pi = Math.PI;
-
-            document.getElementById("radius1").innerHTML = "r = " + r
-            document.getElementById("hojde1").innerHTML = "h = " + h
-            
-            
-            textVR = pi*r*r*h;
-            document.getElementById("cylinderVR").innerHTML = "Rumfang: " + textVR + " cm" + "3".sup();
-            
-            textOA = 2*pi*r*h;
-            document.getElementById("cylinderOA").innerHTML =  "Overfladeareal: " + textOA + " cm" + "2".sup();
-        }
-    
+        /* Det er inde på denne side at du finder det værktøj du kan låne eller se det der er udlejet */
+       
         </script>
 
-        <h1>Cylinder - Rumfang og overflade</h1>
+        <h1>VÆRKTØJ</h1>
 
         <p>
-            Cylinder rumfang = <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;V&space;=&space;\pi&space;\cdot&space;r^{2}&space;\cdot&space;h" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;V&space;=&space;\pi&space;\cdot&space;r^{2}&space;\cdot&space;h" title="V = \pi \cdot r^{2} \cdot h" /></a>
+            Cylinder rumfang 
         </p>
         
-        <p>
-            Cylinder overfladeareal = <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;O&space;=&space;2&space;\cdot&space;\pi&space;\cdot&space;r&space;\cdot&space;h" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;O&space;=&space;2&space;\cdot&space;\pi&space;\cdot&space;r&space;\cdot&space;h" title="O = 2 \cdot \pi \cdot r \cdot h" /></a>
-        </p></br>
-    
-        <div id="svgcontainer">
-        <svg viewBox="0 0 300 300">
-            CYLINDER:
-            <!-- øverste ellipse -->
-            <ellipse cx="110" cy="55" rx="100" ry="50" style="fill:#dbd3bd;stroke:black;stroke-width:2" />
-  
-            <!-- nederste ellipse -->
-            <ellipse cx="110" cy="220" rx="100" ry="50" style="fill:#dbd3bd;stroke:black;stroke-width:2" />
-            <line x1="10" y1="60" x2="10" y2="220" style="fill:none;stroke:black;stroke-width:2" />
-            <line x1="210" y1="60" x2="210" y2="220" style="fill:none;stroke:black;stroke-width:2;" />
-  
-            <!-- radius -->
-            <line x1="110" y1="220" x2="10" y2="220" style="stroke:red;stroke-width:2;"/>
-            <!-- højde -->
-            <line x1="110" y1="220" x2="110" y2="55" style="stroke:red;stroke-width:2;"/>
-            <!-- radius -->
-            <text x="60" y="210" fill="red" id="radius1">r = </text>
-            <!-- højde -->
-            <text x="125" y="140" fill="red" id="hojde1">h = </text>
-            </svg>
-        </div>    
+        </br>
+    </div>    
             
-        <!-- Beregning -->
-    
-        <p>
-            <b>Beregning af cylinderet:</b>
-        </p>
-    
-        <p>
-            Indtast radius og højde på cylinderet i cm
-        </p>
-    
-
-        Radius: <input id="Cradius"><br><br>
         
-        Højde: <input id="Chojde">
-
-    <button type="button" onclick="cylinder()">Beregn</button>
-
-        <p id="cylinderVR"> </p>
-
-        <p id="cylinderOA"> </p>
-<div id="footer"><br />&copy; 2016 Anders Raagaard og Emil Trangeled. All rights reserved.</div>
 </body>
 </html>
