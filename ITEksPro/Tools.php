@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html>
 <title>Værktøjskassen</title>
 <meta charset="UTF-8">
@@ -82,6 +82,42 @@ body {
                 <td class="w3-table-border">3</td>
             </tr>
         </table>
+        <?php
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$dbname = "verktojskassen";
+
+/* definering af server */
+                
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+     die("Connection failed: " . $conn->connect_error);
+} 
+
+// Connection til server
+                
+$sql = "SELECT V_ID, Navn, Type, Specification FROM tools";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+     // output data of each row
+     while($row = $result->fetch_assoc()) {
+    echo "<br>  ". $row["V_ID"]. 
+            "  ". $row["Navn"].
+            "  " . $row["Type"].
+            "  " . $row["Specification"].
+            "<br>";
+     }
+} else {
+     echo "0 results";
+}
+//Vi havde ikke tid til at sætte klick funktioner på de forskellige værktøjer
+                
+$conn->close();
+?> 
         
     </div>
 

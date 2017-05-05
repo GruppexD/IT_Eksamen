@@ -53,6 +53,7 @@ background: #999;
 }
 
 a{text-decoration: none;}
+.w3-margin-top300{margin-top:300px!important}
 /*End my Classes*/
 
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
