@@ -24,9 +24,41 @@
         </script>
 
         <h1>VÆRKTØJ</h1>
+        
+    
 
+    <style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <td>V_ID</td>
+    <td>V_Navn</td>
+    <td>Type</td>
+    <td>Specification</td>
+  </tr>
+ <?php
+  foreach (filter_list() as $id =>$filter) {
+      echo '<tr><td>' . $filter . '</td><td>' . filter_id($filter) . '</td></tr>';
+  }
+  ?>
+</table>
+
+    
+
+    
+    
         <p>
-            Cylinder rumfang 
+             
         </p>
         
         </br>
